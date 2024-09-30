@@ -23,6 +23,7 @@
                 </ul>
             </div>
         </nav>
+        <div class="burger-menu">&#9776;</div>
     </header>
 
     <section id="home">
@@ -45,7 +46,7 @@
         <div class="container">
             <h2>Looking for a Data Analyst?</h2>
             <p>If you're interested in collaborating or hiring me for a project, feel free to reach out!</p>
-            <button class="btn" id="contactButton">Hire Me</button>
+            <button class="btn" id="contactButton">Contact Me</button>
         </div>
     </section>
     
@@ -96,7 +97,17 @@
                 modal.style.display = "none"; // Hide the modal
             }
         });
+
+        const burgerMenu = document.querySelector('.burger-menu');
+const navLinks = document.querySelector('nav ul');
+
+burgerMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('nav-active');
+});
+
     </script>
+
+    
     
 </body>
 

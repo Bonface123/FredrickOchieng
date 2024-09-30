@@ -603,12 +603,11 @@ footer p {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  /* Keep items horizontal, even on mobile */
+  /* Adjust flexbox for mobile */
   header nav ul {
-    display: flex; /* Remain as flex for horizontal alignment */
-    flex-direction: row; /* Ensure horizontal flow */
-    gap: 15px; /* Adjust gap for mobile */
-    align-items: center; /* Vertically center items */
+    flex-direction: column; /* Stack items vertically for better spacing */
+    gap: 10px; /* Reduce gap to fit all items */
+    align-items: flex-start; /* Align items to start */
     position: absolute;
     top: 70px;
     right: 0;
@@ -616,6 +615,7 @@ footer p {
     width: 100%;
     padding: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    display: none; /* Hide initially */
   }
 
   header .burger-menu {
@@ -623,6 +623,8 @@ footer p {
   }
 
   .nav-active {
-    display: flex; /* Keep the links displayed inline when toggled */
+    display: flex; /* Show links when burger menu is active */
+    flex-direction: column; /* Stack the links vertically */
+    width: 100%;
   }
 }
