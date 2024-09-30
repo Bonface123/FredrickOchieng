@@ -621,6 +621,10 @@ footer p {
   header .burger-menu {
     display: block; /* Show burger icon on mobile */
   }
+  /* Show nav links when burger is clicked */
+  .show-nav #nav-links {
+    display: flex;
+  }
 
   .nav-active {
     display: flex; /* Show links when burger menu is active */
