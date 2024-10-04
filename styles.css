@@ -54,7 +54,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #000; /* or your preferred background color */
+  background-color:grey; /* or your preferred background color */
   z-index: 1000; /* To ensure it stays above other content */
   transition: background-color 0.3s;
 }
@@ -64,7 +64,7 @@ header {
 }
 
 .scrolled header {
-  background-color: #000; /* or another color */
+  background-color: grey; /* or another color */
 }
 
 html {
@@ -90,7 +90,7 @@ header nav ul {
   margin: 0; /* Remove default margin */
   display: flex; /* Use flex to allow items to flow vertically */
   flex-direction:row; /* Stack links vertically */
-  gap: 10px; /* Space between links */
+  gap: 6px; /* Space between links */
 }
 
 header nav ul li {
