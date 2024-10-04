@@ -9,7 +9,7 @@
 body {
   line-height: 1.6;
   font-size: 16px;
-  background-color: #000; /* Black background */
+  background-color: #444; /* Black background */
   color: #fff; /* Light text color for contrast */
   padding-top: 80px; /* Account for fixed header */
   font-family: 'Roboto', sans-serif;
@@ -49,11 +49,14 @@ body {
 }
 
 
+
 /* Header */
 header {
   position: fixed;
+  align-items: center;
   top: 0;
   width: 100%;
+  justify-content: space-between;
   background-color:grey; /* or your preferred background color */
   z-index: 1000; /* To ensure it stays above other content */
   transition: background-color 0.3s;
@@ -376,14 +379,19 @@ h2 {
       }
       
       #hire-me .btn {
-          background-color: #007bff; /* Set button background color */
-          color: #fff; /* Set button text color */
-          padding: 10px 20px; /* Add padding to button */
-          border: none; /* Remove border */
-          border-radius: 5px; /* Round the button corners */
-          cursor: pointer; /* Change cursor on hover */
-          transition: background-color 0.3s; /* Add transition for hover effect */
+        display: inline-block; /* Ensures it's treated as a button */
+        margin-top: 10px;
+        border-radius: 3px;
+        border: none;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        align-self: center; /* Center button inside the card */
       }
+    
       
       #hire-me .btn:hover {
           background-color: #0056b3; /* Darken button on hover */
@@ -664,3 +672,5 @@ footer p {
       grid-template-columns: 1fr;
   }
 }
+
+

@@ -33,3 +33,22 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
   
+  // Toggle light/dark mode
+const themeToggle = document.getElementById('theme-toggle');
+
+// Check for saved user preference
+if (localStorage.getItem('theme') === 'light') {
+  document.documentElement.setAttribute('data-theme', 'light');
+  themeToggle.checked = true;
+}
+
+themeToggle.addEventListener('change', () => {
+  if (themeToggle.checked) {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light'); // Save the preference
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark'); // Save the preference
+  }
+});
+
