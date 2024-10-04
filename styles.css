@@ -24,13 +24,23 @@ body {
 
 /* Header */
 header {
-  background-color: #1a1a1a; /* Darker background for header */
-  color: #fff;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background-color: #000; /* or your preferred background color */
+  z-index: 1000; /* To ensure it stays above other content */
+  transition: background-color 0.3s;
+}
+
+.home-page header {
+  background-color: transparent;
+}
+.scrolled header {
+  background-color: #000; /* or another color */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 header .container {
