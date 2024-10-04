@@ -89,7 +89,7 @@ header nav ul {
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
   display: flex; /* Use flex to allow items to flow vertically */
-  flex-direction: column; /* Stack links vertically */
+  flex-direction:row; /* Stack links vertically */
   gap: 10px; /* Space between links */
 }
 
