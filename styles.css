@@ -94,7 +94,7 @@ header nav ul {
 }
 
 header nav ul li {
-  width: 100%; /* Make list items take full width */
+  width: 80%; /* Make list items take full width */
 }
 
 header nav ul li a {
