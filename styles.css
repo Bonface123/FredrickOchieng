@@ -100,7 +100,7 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 8px; /* Increased padding for better click area */
+  padding: 4px; /* Increased padding for better click area */
   width: 80%; /* Make links take full width */
   display: block; /* Make the link fill the list item */
   transition: background-color 0.3s, color 0.3s;
