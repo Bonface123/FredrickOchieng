@@ -62,6 +62,7 @@ header {
 .home-page header {
   background-color: transparent;
 }
+
 .scrolled header {
   background-color: #000; /* or another color */
 }
@@ -72,41 +73,42 @@ html {
 
 header .container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
   padding: 10px 0;
 }
 
 header h1 {
   margin: 0;
   font-size: 1.8rem;
+  color: white; /* Adjust header color for visibility */
 }
 
 header nav ul {
   list-style: none;
-  display: flex;
-  gap: 20px;
-  align-items: center; /* Ensure items are vertically centered */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flex to allow items to flow vertically */
+  flex-direction: column; /* Stack links vertically */
+  gap: 10px; /* Space between links */
+}
+
+header nav ul li {
+  width: 100%; /* Make list items take full width */
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 8px 15px;
+  padding: 12px; /* Increased padding for better click area */
+  width: 100%; /* Make links take full width */
+  display: block; /* Make the link fill the list item */
   transition: background-color 0.3s, color 0.3s;
 }
 
 header nav ul li a:hover {
   background-color: #007bff; /* Highlight color */
   border-radius: 5px;
-  color: #fff;
-}
-
-/* Burger Menu */
-.burger-menu {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
   color: #fff;
 }
 
