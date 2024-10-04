@@ -90,7 +90,7 @@ header nav ul {
   margin: 0; /* Remove default margin */
   display: flex; /* Use flex to allow items to flow vertically */
   flex-direction:row; /* Stack links vertically */
-  gap: 6px; /* Space between links */
+  gap: 2px; /* Space between links */
 }
 
 header nav ul li {
