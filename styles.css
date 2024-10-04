@@ -248,71 +248,57 @@ h2 {
         .btn:hover {
             background-color: #0056b3;
         }
-
-       /* Experience Section Styling */
+/* Experience Section */
 #experience {
-  background-color: #121212;
-  padding: 40px 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  color: #fff;
-  text-align: center; /* Center content */
-  font-family: 'Arial', sans-serif;
+  padding: 100px 0;
+  background-color: #1e1e1e;
 }
 
 #experience h2 {
-  font-size: 2.5rem; /* Larger font size for heading */
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
   color: #007bff;
-  margin-bottom: 20px;
   border-bottom: 2px solid #007bff;
   display: inline-block;
-  padding-bottom: 10px;
-  width: 100%; /* Ensure it's centered with respect to the page */
+  padding: 20px 0;
 }
 
-/* Experience Grid */
 .experience-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  justify-content: center; /* Center grid content */
-  max-width: 1200px;
-  margin: 0 auto; /* Center the grid container */
+  grid-template-columns: 1fr; /* Adjust to your desired layout */
+  gap: 20px; /* Space between items */
 }
 
-.experience {
+.experience-card {
   background-color: #000;
-  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experience:hover {
-  transform: translateY(-5px); /* Lift on hover for interactivity */
+.experience-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.experience h3 {
-  font-size: 1.8rem; /* Larger font size for subheading */
+.experience-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
   color: #fff;
-  margin-bottom: 10px;
-  font-weight: bold; /* Make it bold */
-  text-transform: inherit; /* Capitalize for emphasis */
 }
 
-.experience p, /* Target all paragraphs within the experience section */
-.experience ul { /* Target lists as well */
-  font-size: 16px;
-  color: #ccc;
-  line-height: 1.6;
-  text-align: center; /* Center the text */
+.experience-card p,
+.experience-card ul {
+  margin-bottom: 15px;
+  color: #ddd;
 }
 
-ul {
-  padding-left: 0; /* Remove left padding for centered lists */
-  list-style-position: inside; /* Keep bullets inside the list */
+.experience-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
 }
-       
 
         /* Footer */
         footer {
@@ -407,52 +393,81 @@ ul {
   background-color: #0056b3;
 }
 
-/* Certifications Section Styling */
+/* Certifications Section */
 #certifications {
-  background-color: #121212;
-  padding: 40px 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  text-align: center;
+  padding: 100px 0;
+  background-color: #1e1e1e;
 }
 
 #certifications h2 {
-  color:#007bff;
-  margin-bottom: 30px;
-  font-size: 2.5rem; /* Larger font size */
-  font-weight: bold; /* Bold font */
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #007bff;
   border-bottom: 2px solid #007bff;
   display: inline-block;
-  padding-bottom: 10px;
+  padding: 20px 0;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .certification {
-  background-color: black;
-  padding: 20px;
+  background-color: #000;
   border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .certification:hover {
-  transform: translateY(-5px); /* Lift on hover for interactivity */
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .certification h3 {
-  font-size: 1.8rem; /* Larger font size for subheading */
+  font-size: 1.5rem;
+  margin-bottom: 15px;
   color: #fff;
+}
+
+.certification img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
   margin-bottom: 10px;
-  font-weight: bold; /* Make it bold */
-  text-transform: inherit; /* Capitalize for emphasis */
 }
 
 .certification p {
   font-size: 16px;
   color: #ccc;
-  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
+.footer-links a {
+  color: #007bff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+
+/* Consistent Button Styling */
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
 /* Education Section Styling */
 #education {
   background-color: #121212;
