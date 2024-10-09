@@ -9,25 +9,14 @@
 body {
   line-height: 1.6;
   font-size: 16px;
-  background-color: #444; /* Black background */
+  background-color: #000; /* Black background */
   color: #fff; /* Light text color for contrast */
   padding-top: 80px; /* Account for fixed header */
-  font-family: 'Roboto', sans-serif;
+  font-family:Arial, Helvetica;
+  align-items: center;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0;
-}
 
-/* Base styles */
-.container {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
 
 /* Mobile styles */
 @media (max-width: 768px) {
@@ -46,10 +35,21 @@ body {
   }
 
   /* Additional styles as needed */
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  /* Base styles */
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
 }
-
-
-
 /* Header */
 header {
   position: fixed;
@@ -57,7 +57,7 @@ header {
   top: 0;
   width: 100%;
   justify-content: space-between;
-  background-color:grey; /* or your preferred background color */
+  background-color:#444; /* or your preferred background color */
   z-index: 1000; /* To ensure it stays above other content */
   transition: background-color 0.3s;
 }
@@ -67,7 +67,7 @@ header {
 }
 
 .scrolled header {
-  background-color: grey; /* or another color */
+  background-color: #444; /* or another color */
 }
 
 html {
@@ -77,8 +77,14 @@ html {
 header .container {
   display: flex;
   flex-direction: column; /* Stack items vertically */
-  align-items: flex-start; /* Align items to the left */
+  align-items:flex-end; /* Align items to the left */
   padding: 10px 0;
+  max-width: 1200px; /* Adjust for your layout */
+  margin: 0 auto; /* Center the container horizontally */
+  justify-content: space-between; /* Space between heading and nav */
+  width: 100%;
+  padding: 0 20px;
+
 }
 
 header h1 {
@@ -92,19 +98,19 @@ header nav ul {
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
   display: flex; /* Use flex to allow items to flow vertically */
-  flex-direction:row; /* Stack links vertically */
+  flex-direction:; /* Stack links vertically */
   gap: 0px; /* Space between links */
 }
 
 header nav ul li {
-  width: 80%; /* Make list items take full width */
+  width: 100%; /* Make list items take full width */
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 4px; /* Increased padding for better click area */
-  width: 80%; /* Make links take full width */
+  width: 100%; /* Make links take full width */
   display: block; /* Make the link fill the list item */
   transition: background-color 0.3s, color 0.3s;
 }
@@ -114,6 +120,7 @@ header nav ul li a:hover {
   border-radius: 5px;
   color: #fff;
 }
+
 
 /* Section Titles */
 h2 {
@@ -131,13 +138,15 @@ h2 {
   padding: 60px 0;
   text-align: center;
   border-bottom: 1px solid #444;
+
 }
 
 .profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0px;
+  gap: 10px; /* Reduced gap between image and name */
+  margin-top: 50px; /* Space between the header and profile section */
 }
 
 .profile-pic {
@@ -156,14 +165,13 @@ h2 {
 
 .profile-info h2 {
   font-size: 2.2rem;
-  margin-bottom: 10px;
+  margin: 5px 0; /* Reduced margin for the name */
   color: #fff; /* White color for name */
 }
 
 .profile-info p {
   margin-bottom: 20px;
 }
-
 /* Button Styling */
 .btn {
   display: inline-block;
@@ -172,7 +180,7 @@ h2 {
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s; /* Added transform for scaling effect */
 }
 
 .btn:hover {
@@ -235,24 +243,6 @@ h2 {
             margin-bottom: 15px;
         }
 
-       .project a.btn {
-    display: inline-block; /* Ensures it's treated as a button */
-    margin-top: 10px;
-    border-radius: 3px;
-    border: none;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    align-self: center; /* Center button inside the card */
-}
-
-.project a.btn:hover {
-    background-color: #0056b3;
-}
-
       .container h2 {
         max-width: 1200px;
         margin: 0 auto;
@@ -275,169 +265,97 @@ h2 {
           grid-template-columns: 1fr; /* Single column on mobile */
       }
   }
-
-        /* Button Styling */
-        .btn {
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-/* Experience Section */
-#experience {
-  padding: 100px 0;
-  background-color: #1e1e1e;
-}
-
-#experience h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
-  display: inline-block;
-  padding: 20px 0;
-}
-
-.experience-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Adjust to your desired layout */
-  gap: 20px; /* Space between items */
-}
-
-.experience-card {
-  background-color: #000;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.experience-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.experience-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #fff;
-}
-
-.experience-card p,
-.experience-card ul {
-  margin-bottom: 15px;
-  color: #ddd;
-}
-
-.experience-card ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .footer-links a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        #hire-me {
-          background-color: inherit; /* Optional: Set a background color */
-          padding: 40px 20px; /* Add padding */
-          text-align: center; /* Center-align text */
-      }
-      
-      #hire-me h2 {
-          font-size: 28px; /* Adjust font size */
-          color: #fff; /* Set text color */
-          margin-bottom: 10px; /* Add margin below heading */
-      }
-      
-      #hire-me p {
-          font-size: 16px; /* Set font size for paragraph */
-          color: #ccc; /* Set paragraph text color */
-          margin-bottom: 20px; /* Add margin below paragraph */
-      }
-      
-      #hire-me .btn {
-        
-        display: inline-block; /* Ensures it's treated as a button */
-        margin-top: 10px;
-        border-radius: 5px;
-        border: none;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-        align-self: center; /* Center button inside the card */
-      }
-    
-      
-      #hire-me .btn:hover {
-          background-color: #0056b3; /* Darken button on hover */
-      }
-      
-
-        
-
-/* Contact Section */
+/* Contact Section Styling */
 #contact {
-  background-color: #111;
-  padding: 60px 0;
-  color: #ddd;
-  text-align: center;
+  padding: 80px 20px; /* Added padding for spacing */
+  background-color: #1e1e1e; /* Background color consistent with the site */
+  color: #fff; /* Text color for readability */
 }
 
-#contact form {
-  max-width: 600px;
-  margin: 0 auto;
+#contact .container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
 }
 
-#contact input,
-#contact textarea {
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Increased gap for better spacing */
+  max-width: 800px; /* Limit the width for better readability */
   width: 100%;
-  padding: 12px;
-  border-radius: 5px;
-  border: 1px solid #555;
-  background-color: #222;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.profile-info {
+  width: 100%;
+  text-align: left; /* Align text to the left for better readability */
+}
+
+.profile-info h2 {
+  font-size: 2.5rem; /* Increased font size */
+  margin-bottom: 20px; /* Increased margin for spacing */
   color: #fff;
 }
 
-#contact button {
-  padding: 12px;
+.profile-info form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap between form elements */
+}
+
+.profile-info label {
+  font-size: 1.1rem; /* Larger font size for labels */
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+.profile-info input[type="text"],
+.profile-info input[type="email"],
+.profile-info textarea {
+  width: 100%; /* Full width inputs */
+  padding: 12px 15px; /* Increased padding for better usability */
+  border: 1px solid #444; /* Subtle border */
+  border-radius: 5px;
+  background-color: #2c2c2c; /* Dark background for inputs */
+  color: #fff; /* White text for readability */
+  font-size: 1rem; /* Adequate font size */
+  transition: border 0.3s ease;
+}
+
+.profile-info input[type="text"]:focus,
+.profile-info input[type="email"]:focus,
+.profile-info textarea:focus {
+  border: 1px solid #007bff; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+.profile-info textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 150px; /* Minimum height for textarea */
+}
+
+.btn {
+  align-self: flex-start; /* Align button to the start */
   background-color: #007bff;
   color: #fff;
+  padding: 12px 25px; /* Increased padding */
   border: none;
-  cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
-#contact button:hover {
+.btn:hover {
   background-color: #0056b3;
 }
 
@@ -496,71 +414,6 @@ h2 {
   margin-bottom: 15px;
 }
 
-.footer-links a {
-  color: #007bff;
-  text-decoration: none;
-  margin-right: 15px;
-}
-
-
-/* Consistent Button Styling */
-.btn {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-/* Education Section Styling */
-#education {
-  background-color: #121212;
-  padding: 40px 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-#education h2 {
-  color: #007bff;
-  margin-bottom: 30px;
-  font-size: 2.5rem; /* Larger font size */
-  font-weight: bold; /* Bold font */
-  border-bottom: 2px solid #007bff;
-  display: inline-block;
-  padding-bottom: 10px;
-}
-
-.education {
-  background-color: #000;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.education:hover {
-  transform: translateY(-5px); /* Lift on hover for interactivity */
-}
-
-.education h3 {
-  font-size: 1.8rem; /* Larger font size for subheading */
-  color: #fff;
-  margin-bottom: 10px;
-  font-weight: bold; /* Make it bold */
-  text-transform: inherit; /* Capitalize for emphasis */
-}
-
-.education p {
-  font-size: 16px;
-  color: #ccc;
-  line-height: 1.6;
-}
 /* Modal Styles */
 .modal {
   display: none; /* Hidden by default */
@@ -644,7 +497,7 @@ h2 {
 
 /* Footer */
 footer {
-  background-color:grey;
+  background-color:#444;
   color: #fff;
   padding: 30px 0;
   text-align: center;
