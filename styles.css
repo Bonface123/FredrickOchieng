@@ -172,9 +172,9 @@ h2 {
 .btn {
   background-color: #007bff; /* Primary color */
   color: #fff; /* Text color */
-  padding: 8px 17px; /* Increased padding */
+  padding: 5px 10px; /* Increased padding */
   border: 2px solid transparent; /* Default border */
-  border-radius: 20px; /* Rounded buttons for a sleek look */
+  border-radius: 15px; /* Rounded buttons for a sleek look */
   cursor: pointer;
   font-size: 1.1rem; /* Slightly larger font */
   font-weight: bold; /* Bold text */
