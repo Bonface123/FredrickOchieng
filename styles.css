@@ -168,28 +168,53 @@ h2 {
   color: #fff; /* White color for name */
 }
 
-/* Button Styling */
+/* General button styling */
 .btn {
-  background-color: #007bff;
-  color: #fff;
-  padding: 12px 25px; /* Increased padding */
-  border: none;
-  border-radius: 5px;
+  background-color: #007bff; /* Primary color */
+  color: #fff; /* Text color */
+  padding: 8px 17px; /* Increased padding */
+  border: 2px solid transparent; /* Default border */
+  border-radius: 20px; /* Rounded buttons for a sleek look */
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+  font-size: 1.1rem; /* Slightly larger font */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
   text-decoration: none;
-  margin-top: 20px; /* Add space between the text and button */
+  display: inline-block;
+  margin: 10px; /* Space between buttons */
 }
 
-/* Hover effect for the button */
+/* Hover effect */
 .btn:hover {
-  background-color: #0056b3;
-  
-}    /* Projects Section */
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #fff; /* Add a white border on hover */
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* Add subtle shadow on hover */
+}
+
+/* Active button styling for press animation */
+.btn:active {
+  transform: scale(0.98); /* Slight button shrink when clicked */
+}
+
+/* Additional styling for specific button (optional) */
+.btn-primary {
+  background-color: #28a745; /* Example of a green button */
+  border-color: #28a745;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+  border-color: #fff;
+}
+ 
+
+/* Projects Section */
         #projects {
             padding: 100px 0;
             background-color: #1e1e1e;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+            
         }
 
         #projects h2 {
@@ -350,7 +375,7 @@ h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #007bff;
+  color:#fff ;
   border-bottom: 2px solid #007bff;
   display: inline-block;
   padding: 20px 0;
