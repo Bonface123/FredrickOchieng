@@ -22,12 +22,16 @@ body .container{
 }
 
 
-/* Mobile styles */
 @media (max-width: 768px) {
   .container {
-      flex-direction: column; /* Stack elements vertically */
-      padding: 10px; /* Adjust padding */
+      flex-direction: column;
+      padding: 10px;
+      min-height: auto; /* Allow container height to adjust dynamically */
+      justify-content: flex-start; /* Ensure content appears from the top */
+      align-items: flex-start; /* Align items to the left */
   }
+}
+
 
   .project-card {
       width: 100%; /* Full width on mobile */
