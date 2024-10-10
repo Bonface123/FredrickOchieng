@@ -12,8 +12,8 @@ body {
   background-color: #000; /* Black background */
   color: #fff; /* Light text color for contrast */
   padding-top: 80px; /* Account for fixed header */
-
 }
+
 body .container{
   display: flex;
   align-items: center;  /* Center vertically */
@@ -23,7 +23,7 @@ body .container{
 
 
 @media (max-width: 768px) {
-  .container {
+  body .container {
       flex-direction: column;
       padding: 10px;
       min-height: auto; /* Allow container height to adjust dynamically */
@@ -44,14 +44,6 @@ body .container{
 
   /* Additional styles as needed */
 
-  .container {
-    display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
-    min-height: 100vh;  /* Full viewport height */
-    padding: 20px;
-}
-}
 /* Header */
 header {
   position: fixed;
