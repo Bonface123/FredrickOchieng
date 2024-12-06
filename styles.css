@@ -9,7 +9,7 @@
 body {
   line-height: 1.6;
   font-size: 16px;
-  background-color: #000; /* Black background */
+  background-color:#1e1e1e; /* Black background */
   color: #fff; /* Light text color for contrast */
   padding-top: 80px; /* Account for fixed header */
   overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -32,34 +32,44 @@ body .container {
 /* Header */
 header {
   position: fixed;
+  align-items: center;
   top: 0;
   width: 100%;
-  background-color: #444; /* Background color */
-  z-index: 1000; /* Keeps header above other content */
-  transition: background-color 0.3s; /* Smooth background color transition */
+  justify-content: space-between;
+  background-color:#000; /* or your preferred background color */
+  z-index: 1000; /* To ensure it stays above other content */
+  transition: background-color 0.3s;
 }
 
 .home-page header {
-  background-color: transparent; /* Transparent header for the homepage */
+  background-color: transparent;
 }
 
 .scrolled header {
-  background-color: #444; /* Background color after scrolling */
+  background-color: #444; /* or another color */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 header .container {
   display: flex;
-  justify-content: space-between; /* Space between header content */
-  align-items: center; /* Center items vertically */
-  padding: 10px 20px; /* Padding for spacing */
-  max-width: 1200px; /* Limit width */
-  margin: 0 auto; /* Center container */
+  flex-direction: column; /* Stack items vertically */
+  align-items:flex-end; /* Align items to the left */
+  padding: 10px 0;
+  max-width: 1200px; /* Adjust for your layout */
+  margin: 0 auto; /* Center the container horizontally */
+  justify-content: space-between; /* Space between heading and nav */
+  width: 100%;
+  padding: 0 20px;
+
 }
 
 header h1 {
   margin: 0;
-  font-size: 1.8rem; /* Header title size */
-  color: white; /* Header title color */
+  font-size: 1.8rem;
+  color: white; /* Adjust header color for visibility */
 }
 
 header nav {
@@ -84,12 +94,15 @@ header nav ul li a {
   background-color: #007bff; /* Background color */
   display: block; /* Ensure the link takes full space */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  font-weight: bold; /* Make text bold */
 }
+
 
 header nav ul li a:hover {
   background-color: #0056b3; /* Darker shade on hover */
   color: #fff; /* Text color on hover */
 }
+
 
 /* Section Titles */
 h2 {
@@ -264,7 +277,7 @@ h2 {
 }
 /* Footer */
 footer {
-  background-color: #444; /* Dark background color */
+  background-color:#000; /* Dark background color */
   color: #fff; /* Light text color for contrast */
   padding: 20px 0;
   text-align: center; /* Center text */

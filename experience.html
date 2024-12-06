@@ -1,70 +1,591 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fredrick Ochieng - Experience</title>
-    <link rel="stylesheet" href="styles.css">
-    
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
 
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="container">
-                <h1>Fredrick Ochieng</h1>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="certifications.html">Certifications</a></li>
-                    <li><a href="education.html">Education</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+body {
+  line-height: 1.6;
+  font-size: 16px;
+  background-color: #000; /* Black background */
+  color: #fff; /* Light text color for contrast */
+  padding-top: 80px; /* Account for fixed header */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
-    <section id="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <h3>Data Analyst Intern</h3>
-                    <p><strong>May 2021 - August 2021</strong></p>
-                    <p style="text-align: justify;">Led a team of data analysts in developing and implementing data-driven solutions that improved business processes and decision-making. Focused on energy, retail, and financial sectors to deliver impactful analytics and business intelligence insights.</p>
-                    <p><strong>Key Responsibilities:</strong></p>
-                    <ol style="text-align: justify;">
-                        <li>Conducted secondary research in 6 Anglophone West African countries.</li>
-                        <li>Created a database of potential partners for the Holberton Software Engineering Program and entrepreneurship enablers in the region.</li>
-                    </ol>
-                </div>
-    
-                <div class="experience-card">
-                    <h3>Data Analyst Specialist</h3>
-                    <p><strong>October 2020 - January 2021</strong></p>
-                    <p style="text-align: justify;">Lake Basin Innovation and Investments Week – Kisumu, Kenya</p>
-                    <p style="text-align: justify;">Worked on multiple data analysis projects.</p>
-                    <p><strong>Key Responsibilities:</strong></p>
-                    <ol style="text-align: justify;">
-                        <li>Monitored and analyzed social media metrics, leveraging data analytics tools to measure campaign effectiveness and refine strategies.</li>
-                        <li>Collaborated with event stakeholders to align social media strategies with event goals.</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+body .container{
+  display: flex;
+  align-items: center;  /* Center vertically */
+  flex-direction: column;
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="tel:+254725283693"><i class="fas fa-phone-alt"></i> +254725283693</a>
-                <a href="mailto:fredaochieng@gmail.com"><i class="fas fa-envelope"></i> fredaochieng@gmail.com</a>
-                <a href="https://www.linkedin.com/in/fredrickochieng1/?originalSubdomain=ke"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/fred0chieng" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-            <p>&copy; 2024 Fredrick Ochieng. All Rights Reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+}
+
+
+@media (max-width: 768px) {
+  body .container {
+      flex-direction: column;
+      padding: 10px;
+      min-height: auto; /* Allow container height to adjust dynamically */
+      justify-content: flex-start; /* Ensure content appears from the top */
+      align-items: flex-start; /* Align items to the left */
+  }
+}
+
+
+  .project-card {
+      width: 100%; /* Full width on mobile */
+      margin: 10px 0; /* Add spacing between cards */
+  }
+
+  .header {
+      text-align: center; /* Center align header */
+  }
+
+  /* Additional styles as needed */
+
+/* Header */
+header {
+  position: fixed;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+  background-color:#444; /* or your preferred background color */
+  z-index: 1000; /* To ensure it stays above other content */
+  transition: background-color 0.3s;
+}
+
+.home-page header {
+  background-color: transparent;
+}
+
+.scrolled header {
+  background-color: #444; /* or another color */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items:flex-end; /* Align items to the left */
+  padding: 10px 0;
+  max-width: 1200px; /* Adjust for your layout */
+  margin: 0 auto; /* Center the container horizontally */
+  justify-content: space-between; /* Space between heading and nav */
+  width: 100%;
+  padding: 0 20px;
+
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: white; /* Adjust header color for visibility */
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flex to allow items to flow vertically */
+  gap: 0px; /* Space between links */
+}
+
+header nav ul li {
+  width: 100%; /* Make list items take full width */
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 4px; /* Increased padding for better click area */
+  width: 100%; /* Make links take full width */
+  display: block; /* Make the link fill the list item */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+  background-color: #007bff; /* Highlight color */
+  border-radius: 5px;
+  color: #fff;
+}
+
+
+/* Section Titles */
+h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+
+/* About Section */
+#about {
+  background-color: #111; /* Darker section background */
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 1px solid #444;
+
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Reduced gap between image and name */
+  margin-top: 50px; /* Space between the header and profile section */
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow for contrast */
+}
+
+.profile-info {
+  max-width: 600px;
+  text-align: center;
+  color: #ddd; /* Slightly lighter text */
+}
+
+.profile-info h2 {
+  font-size: 2.2rem;
+  margin: 5px 0; /* Reduced margin for the name */
+  color: #fff; /* White color for name */
+}
+
+/* General button styling */
+.btn {
+  background-color: #007bff; /* Primary color */
+  color: #fff; /* Text color */
+  padding: 5px 10px; /* Increased padding */
+  border: 2px solid transparent; /* Default border */
+  border-radius: 15px; /* Rounded buttons for a sleek look */
+  cursor: pointer;
+  font-size: 1.1rem; /* Slightly larger font */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px; /* Space between buttons */
+  text-align: center;
+  
+}
+
+/* Hover effect */
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #fff; /* Add a white border on hover */
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* Add subtle shadow on hover */
+}
+
+/* Active button styling for press animation */
+.btn:active {
+  transform: scale(0.98); /* Slight button shrink when clicked */
+}
+
+/* Additional styling for specific button (optional) */
+.btn-primary {
+  background-color: #28a745; /* Example of a green button */
+  border-color: #28a745;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+  border-color: #fff;
+}
+ 
+/* Projects Section */
+#projects {
+    padding: 80px 0;
+    background-color: #1e1e1e;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+    border-bottom: 3px solid #007bff;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Project Card Styling */
+.project {
+    background-color: #282828;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Project Image */
+.project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 15px;
+}
+
+/* Project Title */
+.project h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #00aaff;
+}
+
+/* Project Details */
+.project p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #cccccc;
+}
+
+/* Key Features List */
+.project ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+.project ol li {
+    margin-bottom: 10px;
+}
+
+/* Button */
+.project .btn {
+    display: block;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #projects h2 {
+        font-size: 2.2rem;
+    }
+
+    .project img {
+        height: 150px;
+    }
+
+    .project h3 {
+        font-size: 1.4rem;
+    }
+
+    .project p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        padding: 15px;
+    }
+
+    .project h3 {
+        font-size: 1.2rem;
+    }
+
+    .project p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Contact Section Styling */
+#contact {
+  padding: 80px 20px; /* Added padding for spacing */
+  background-color: #1e1e1e; /* Background color consistent with the site */
+  color: #fff; /* Text color for readability */
+}
+
+#contact .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Increased gap for better spacing */
+  max-width: 800px; /* Limit the width for better readability */
+  width: 100%;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.profile-info {
+  width: 100%;
+  text-align: left; /* Align text to the left for better readability */
+}
+
+.profile-info h2 {
+  font-size: 2.5rem; /* Increased font size */
+  margin-bottom: 20px; /* Increased margin for spacing */
+  color: #fff;
+}
+
+.profile-info form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap between form elements */
+}
+
+.profile-info label {
+  font-size: 1.1rem; /* Larger font size for labels */
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+.profile-info input[type="text"],
+.profile-info input[type="email"],
+.profile-info textarea {
+  width: 100%; /* Full width inputs */
+  padding: 12px 15px; /* Increased padding for better usability */
+  border: 1px solid #444; /* Subtle border */
+  border-radius: 5px;
+  background-color: #2c2c2c; /* Dark background for inputs */
+  color: #fff; /* White text for readability */
+  font-size: 1rem; /* Adequate font size */
+  transition: border 0.3s ease;
+}
+
+.profile-info input[type="text"]:focus,
+.profile-info input[type="email"]:focus,
+.profile-info textarea:focus {
+  border: 1px solid #007bff; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+.profile-info textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 150px; /* Minimum height for textarea */
+}
+
+
+/* Certifications Section */
+#certifications {
+  padding: 100px 0;
+  background-color: #1e1e1e;
+}
+
+#certifications h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color:#fff ;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  padding: 20px 0;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.certification {
+  background-color: #000;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.certification h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.certification img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 10px;
+}
+
+.certification p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #1a1a1a; /* Dark background */
+  margin: 10% auto; /* Center the modal */
+  padding: 20px;
+  border: 1px solid #007bff; /* Border color */
+  width: 90%; /* Full width on smaller screens */
+  max-width: 500px; /* Limit maximum width */
+  border-radius: 8px; /* Rounded corners */
+  color: #fff; /* Text color */
+}
+
+.close {
+  color: #aaa; /* Light gray for close button */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff; /* Change color on hover */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal h2 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.modal form {
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Stack items vertically */
+  gap: 10px; /* Space between items */
+}
+
+.modal form input,
+.modal form textarea {
+  padding: 10px; /* Inner padding */
+  border: 1px solid #007bff; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #333; /* Dark background for input */
+  color: #fff; /* Text color */
+  transition: border 0.3s; /* Transition for border */
+}
+
+.modal form input:focus,
+.modal form textarea:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove outline */
+}
+
+.modal form button {
+  padding: 10px; /* Inner padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #007bff; /* Button color */
+  color: #fff; /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Transition for background color */
+}
+
+.modal form button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+
+/* Footer */
+footer {
+  background-color:#444;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid #444;
+}
+
+footer .footer-links a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+  color: #007bff;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+
