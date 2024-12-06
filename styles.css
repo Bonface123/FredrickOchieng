@@ -12,108 +12,84 @@ body {
   background-color: #000; /* Black background */
   color: #fff; /* Light text color for contrast */
   padding-top: 80px; /* Account for fixed header */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-body .container{
+body .container {
   display: flex;
-  align-items: center;  /* Center vertically */
   flex-direction: column;
-
+  align-items: center; /* Center vertically */
 }
-
 
 @media (max-width: 768px) {
   body .container {
-      flex-direction: column;
-      padding: 10px;
-      min-height: auto; /* Allow container height to adjust dynamically */
-      justify-content: flex-start; /* Ensure content appears from the top */
-      align-items: flex-start; /* Align items to the left */
+    padding: 10px;
+    justify-content: flex-start; /* Ensure content appears from the top */
+    align-items: flex-start; /* Align items to the left */
   }
 }
-
-
-  .project-card {
-      width: 100%; /* Full width on mobile */
-      margin: 10px 0; /* Add spacing between cards */
-  }
-
-  .header {
-      text-align: center; /* Center align header */
-  }
-
-  /* Additional styles as needed */
 
 /* Header */
 header {
   position: fixed;
-  align-items: center;
   top: 0;
   width: 100%;
-  justify-content: space-between;
-  background-color:#444; /* or your preferred background color */
-  z-index: 1000; /* To ensure it stays above other content */
-  transition: background-color 0.3s;
+  background-color: #444; /* Background color */
+  z-index: 1000; /* Keeps header above other content */
+  transition: background-color 0.3s; /* Smooth background color transition */
 }
 
 .home-page header {
-  background-color: transparent;
+  background-color: transparent; /* Transparent header for the homepage */
 }
 
 .scrolled header {
-  background-color: #444; /* or another color */
-}
-
-html {
-  scroll-behavior: smooth;
+  background-color: #444; /* Background color after scrolling */
 }
 
 header .container {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items:flex-end; /* Align items to the left */
-  padding: 10px 0;
-  max-width: 1200px; /* Adjust for your layout */
-  margin: 0 auto; /* Center the container horizontally */
-  justify-content: space-between; /* Space between heading and nav */
-  width: 100%;
-  padding: 0 20px;
-
+  justify-content: space-between; /* Space between header content */
+  align-items: center; /* Center items vertically */
+  padding: 10px 20px; /* Padding for spacing */
+  max-width: 1200px; /* Limit width */
+  margin: 0 auto; /* Center container */
 }
 
 header h1 {
   margin: 0;
-  font-size: 1.8rem;
-  color: white; /* Adjust header color for visibility */
+  font-size: 1.8rem; /* Header title size */
+  color: white; /* Header title color */
+}
+
+header nav {
+  margin-left: auto; /* Push the nav to the far right */
 }
 
 header nav ul {
   list-style: none;
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-  display: flex; /* Use flex to allow items to flow vertically */
-  gap: 0px; /* Space between links */
+  display: flex; /* Align items in a row */
+  gap: 15px; /* Space between navigation items */
 }
 
 header nav ul li {
-  width: 100%; /* Make list items take full width */
+  display: inline-block; /* Make items inline-block */
 }
 
 header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 4px; /* Increased padding for better click area */
-  width: 100%; /* Make links take full width */
-  display: block; /* Make the link fill the list item */
-  transition: background-color 0.3s, color 0.3s;
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  padding: 8px 12px; /* Padding for clickable area */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #007bff; /* Background color */
+  display: block; /* Ensure the link takes full space */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 header nav ul li a:hover {
-  background-color: #007bff; /* Highlight color */
-  border-radius: 5px;
-  color: #fff;
+  background-color: #0056b3; /* Darker shade on hover */
+  color: #fff; /* Text color on hover */
 }
-
 
 /* Section Titles */
 h2 {
@@ -125,14 +101,12 @@ h2 {
   padding-bottom: 10px;
 }
 
-
 /* About Section */
 #about {
-  background-color: #111; /* Darker section background */
+  background-color: #1e1e1e; /* Darker section background */
   padding: 60px 0;
   text-align: center;
   border-bottom: 1px solid #444;
-
 }
 
 .profile {
@@ -163,39 +137,35 @@ h2 {
   color: #fff; /* White color for name */
 }
 
-/* General button styling */
+/* General Button Styling */
 .btn {
   background-color: #007bff; /* Primary color */
   color: #fff; /* Text color */
   padding: 5px 10px; /* Increased padding */
-  border: 2px solid transparent; /* Default border */
-  border-radius: 15px; /* Rounded buttons for a sleek look */
+  border-radius: 10px; /* Rounded buttons */
   cursor: pointer;
   font-size: 1.1rem; /* Slightly larger font */
   font-weight: bold; /* Bold text */
   transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
-  text-decoration: none;
   display: inline-block;
   margin: 10px; /* Space between buttons */
   text-align: center;
-  
+  text-decoration: none;
+
 }
 
-/* Hover effect */
 .btn:hover {
   background-color: #0056b3; /* Darker blue on hover */
-  border-color: #fff; /* Add a white border on hover */
-  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* Add subtle shadow on hover */
+  border-color: #fff; /* White border on hover */
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* Subtle shadow */
 }
 
-/* Active button styling for press animation */
 .btn:active {
   transform: scale(0.98); /* Slight button shrink when clicked */
 }
 
-/* Additional styling for specific button (optional) */
 .btn-primary {
-  background-color: #28a745; /* Example of a green button */
+  background-color: #28a745; /* Green button */
   border-color: #28a745;
 }
 
@@ -203,7 +173,7 @@ h2 {
   background-color: #218838;
   border-color: #fff;
 }
- 
+
 /* Projects Section */
 #projects {
   padding: 80px 0;
@@ -235,11 +205,10 @@ h2 {
   gap: 25px;
 }
 
-/* Project Card Styling */
+/* Project Card */
 .project {
   background-color: #282828;
   border-radius: 10px;
-  overflow: hidden;
   padding: 20px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -251,7 +220,6 @@ h2 {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* Project Image */
 .project img {
   width: 100%;
   height: 180px;
@@ -260,7 +228,6 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* Project Title */
 .project h3 {
   font-size: 1.6rem;
   margin-bottom: 15px;
@@ -268,7 +235,6 @@ h2 {
   color: #00aaff;
 }
 
-/* Project Details */
 .project p {
   font-size: 1rem;
   margin-bottom: 20px;
@@ -276,7 +242,6 @@ h2 {
   color: #cccccc;
 }
 
-/* Key Features List */
 .project ol {
   margin-left: 20px;
   margin-bottom: 20px;
@@ -287,7 +252,6 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Button */
 .project .btn {
   display: block;
   text-align: center;
@@ -296,50 +260,47 @@ h2 {
   color: #ffffff;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
+}
+/* Footer */
+footer {
+  background-color: #444; /* Dark background color */
+  color: #fff; /* Light text color for contrast */
+  padding: 20px 0;
+  text-align: center; /* Center text */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #555; /* Subtle top border */
 }
 
-.project .btn:hover {
-  background-color: #0056b3;
+footer a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold links */
+  transition: color 0.3s; /* Smooth color transition */
 }
 
-/* Responsive Adjustments */
+footer a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+footer p {
+  margin: 10px 0; /* Spacing for text */
+  font-size: 0.9rem; /* Slightly smaller font size */
+  color: #ddd; /* Light grey for secondary text */
+}
+
+/* Responsive Adjustments for Footer */
 @media (max-width: 768px) {
-  #projects h2 {
-      font-size: 2.2rem;
+  footer {
+    padding: 15px 10px; /* Adjust padding for smaller screens */
   }
 
-  .project img {
-      height: 150px;
-  }
-
-  .project h3 {
-      font-size: 1.4rem;
-  }
-
-  .project p {
-      font-size: 0.9rem;
+  footer p {
+    font-size: 0.8rem; /* Smaller text size for mobile */
   }
 }
-
-@media (max-width: 480px) {
-  .projects-grid {
-      grid-template-columns: 1fr;
-  }
-
-  .project {
-      padding: 15px;
-  }
-
-  .project h3 {
-      font-size: 1.2rem;
-  }
-
-  .project p {
-      font-size: 0.85rem;
-  }
-}
-
 /* Contact Section Styling */
 #contact {
   padding: 80px 20px; /* Added padding for spacing */
@@ -379,6 +340,7 @@ h2 {
   font-size: 2.5rem; /* Increased font size */
   margin-bottom: 20px; /* Increased margin for spacing */
   color: #fff;
+  align-items: center;
 }
 
 .profile-info form {
@@ -416,175 +378,4 @@ h2 {
   resize: vertical; /* Allow vertical resizing */
   min-height: 150px; /* Minimum height for textarea */
 }
-
-
-/* Certifications Section */
-#certifications {
-  padding: 100px 0;
-  background-color: #1e1e1e;
-}
-
-#certifications h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color:#fff ;
-  border-bottom: 2px solid #007bff;
-  display: inline-block;
-  padding: 20px 0;
-}
-
-.certifications-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.certification {
-  background-color: #000;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.certification:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.certification h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #fff;
-}
-
-.certification img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px 5px 0 0;
-  margin-bottom: 10px;
-}
-
-.certification p {
-  font-size: 16px;
-  color: #ccc;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-/* Modal Styles */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-}
-
-.modal-content {
-  background-color: #1a1a1a; /* Dark background */
-  margin: 10% auto; /* Center the modal */
-  padding: 20px;
-  border: 1px solid #007bff; /* Border color */
-  width: 90%; /* Full width on smaller screens */
-  max-width: 500px; /* Limit maximum width */
-  border-radius: 8px; /* Rounded corners */
-  color: #fff; /* Text color */
-}
-
-.close {
-  color: #aaa; /* Light gray for close button */
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #fff; /* Change color on hover */
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal h2 {
-  text-align: center; /* Center the heading */
-  margin-bottom: 20px; /* Space below the heading */
-}
-
-.modal form {
-  display: flex; /* Flex layout */
-  flex-direction: column; /* Stack items vertically */
-  gap: 10px; /* Space between items */
-}
-
-.modal form input,
-.modal form textarea {
-  padding: 10px; /* Inner padding */
-  border: 1px solid #007bff; /* Border color */
-  border-radius: 5px; /* Rounded corners */
-  background-color: #333; /* Dark background for input */
-  color: #fff; /* Text color */
-  transition: border 0.3s; /* Transition for border */
-}
-
-.modal form input:focus,
-.modal form textarea:focus {
-  border-color: #007bff; /* Change border color on focus */
-  outline: none; /* Remove outline */
-}
-
-.modal form button {
-  padding: 10px; /* Inner padding */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  background-color: #007bff; /* Button color */
-  color: #fff; /* Text color */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Transition for background color */
-}
-
-.modal form button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-}
-
-
-
-/* Footer */
-footer {
-  background-color:#444;
-  color: #fff;
-  padding: 30px 0;
-  text-align: center;
-  border-top: 1px solid #444;
-}
-
-footer .footer-links a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-footer .footer-links a:hover {
-  color: #007bff;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #bbb;
-}
-/* Responsive Design */
-@media (max-width: 768px) {
-  .projects-grid {
-      grid-template-columns: 1fr;
-  }
-}
-
 
