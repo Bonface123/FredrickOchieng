@@ -52,23 +52,34 @@
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
-                <!-- Existing Project -->
+                <!-- Updated Project: Electricity Consumption Forecasting -->
                 <div class="project">
-                    <h3 style="text-align: center;">Electricity Consumption Prediction for Tétouan, Morocco</h3>
-                    <img src="images/project1.jpg" alt="Electricity Consumption Prediction Project" class="project-image">
-                    <h4>Project Details</h4>
-                    <p>This project applies time series analysis to forecast electricity consumption in 10-minute intervals for the city of Tétouan, Morocco. By providing accurate predictions, the project supports efficient energy management for the city's 380,000 residents.</p>
-                    <h4>Key Features:</h4>
-                    <ol style="text-align: left; margin-left: 20px;">
-                        <li><b>Data Processing:</b> Analyzed 500,000+ data points to identify energy usage patterns, resulting in a 20% improvement in prediction accuracy.</li>
-                        <li><b>Predictive Modeling:</b> Developed and optimized three predictive models to forecast demand, reducing error rates by 15%.</li>
-                        <li><b>Interactive Dashboards:</b> Designed five dashboards for real-time monitoring, empowering stakeholders with data-driven insights and improving decision-making efficiency.</li>
-                        <li>This project equips city planners and utility managers with actionable insights to manage energy resources effectively, addressing demand fluctuations and supporting sustainable urban infrastructure.</li>
-                    </ol>
-                    <a href="https://github.com/fred0chieng" target="_blank" class="btn">View on GitHub</a>
+                    <h3 style="text-align: center;">Electricity Consumption Forecasting for Tétouan, Morocco</h3>
+                    <img src="images/project1.jpg" alt="Electricity Consumption Forecasting Project" class="project-image">
+                    <h4>Project Overview</h4>
+                    <p>This project leverages time series analysis to forecast electricity consumption in 10-minute intervals for Tétouan, Morocco. By analyzing high-resolution data and key weather parameters, the project aims to optimize energy resource planning and support the integration of renewable energy sources.</p>
+                    <h4>Context</h4>
+                    <p>Tétouan, a northern Moroccan city with a population of 380,000, experiences fluctuating energy demands influenced by its Mediterranean climate. With energy production primarily reliant on non-renewable sources (64%), accurate demand forecasting is essential for improving energy efficiency and planning.</p>
+                    <p>The city’s power distribution network, managed by Amendis, is divided into three zones: Quads, Smir, and Boussafou. Each zone’s unique consumption patterns provide an opportunity to design localized solutions for energy management.</p>
+                    <h4>Dataset</h4>
+                    <p>The dataset, collected by Amendis’ SCADA system, contains 52,416 observations recorded at 10-minute intervals from January 1 to December 30, 2017. It includes:</p>
+                    <ul>
+                        <li><strong>Weather Variables:</strong> Temperature (°C), humidity (%), and wind speed (km/h).</li>
+                        <li><strong>Energy Consumption:</strong> Zone-wise power usage (kW) for three distinct areas.</li>
+                    </ul>
+                    <h4>Key Highlights</h4>
+                    <ul>
+                        <li><strong>High-Resolution Insights:</strong> The granularity of 10-minute intervals enables precise forecasting.</li>
+                        <li><strong>Zone-Specific Analysis:</strong> Consumption patterns for each zone reveal localized trends.</li>
+                        <li><strong>Weather Impact Assessment:</strong> Examines the role of environmental factors in energy usage.</li>
+                    </ul>
+                    <div class="buttons">
+                        <a href="https://ewtkr67awm2gynd92wdqdx.streamlit.app/" target="_blank" class="btn">View Live Project</a>
+                        <a href="https://github.com/fred0chieng" target="_blank" class="btn">View on GitHub</a>
+                    </div>
                 </div>
     
-                <!-- New Project: 2023 Florida Medicaid Report -->
+                <!-- Existing Project: 2023 Florida Medicaid Report -->
                 <div class="project">
                     <h3 style="text-align: center;">2023 Florida Medicaid Report: Analyzing Humana’s Market Presence</h3>
                     <img src="images/medicaid_report.jpg" alt="Florida Medicaid Report" class="project-image">
@@ -110,6 +121,32 @@
         </div>
     </section>
 
+    <div class="container">
+        <div class="profile">
+        
+            <div class="profile-info">
+                <h2 style="align-items: center;">Contact Me</h2>
+                <form id="contactForm" action="https://formspree.io/f/mvgopzay" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
     
     <footer>
         <div class="container">

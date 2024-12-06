@@ -28,6 +28,21 @@ body .container {
     align-items: flex-start; /* Align items to the left */
   }
 }
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
 
 /* Header */
 header {
@@ -331,7 +346,6 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* Increased gap for better spacing */
   max-width: 800px; /* Limit the width for better readability */
   width: 100%;
 }
