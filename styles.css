@@ -9,25 +9,31 @@
 body {
   line-height: 1.6;
   font-size: 16px;
-  background-color:#1e1e1e; /* Black background */
-  color: #fff; /* Light text color for contrast */
-  padding-top: 80px; /* Account for fixed header */
+  background-color: #1e1e1e; /* Dark background for modern look */
+  color: #f0f0f0; /* Slightly lighter text for better readability */
+  padding-top: 80px; /* Account for fixed header height */
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 body .container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center vertically */
+  align-items: center; /* Center content horizontally */
+  gap: 20px; /* Add spacing between elements for better layout */
+  padding: 20px; /* General padding for inner content */
+  max-width: 1200px; /* Limit container width for readability */
+  margin: 0 auto; /* Center container on the page */
 }
 
 @media (max-width: 768px) {
   body .container {
-    padding: 10px;
-    justify-content: flex-start; /* Ensure content appears from the top */
-    align-items: flex-start; /* Align items to the left */
+    padding: 15px; /* Reduce padding for smaller screens */
+    justify-content: flex-start; /* Ensure content starts at the top */
+    align-items: flex-start; /* Align items to the left for smaller viewports */
+    gap: 15px; /* Adjust gap for tighter layouts */
   }
 }
+
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -51,7 +57,7 @@ header {
   top: 0;
   width: 100%;
   justify-content: space-between;
-  background-color:#000; /* or your preferred background color */
+  background-color: #000; /* Black background */
   z-index: 1000; /* To ensure it stays above other content */
   transition: background-color 0.3s;
 }
@@ -61,7 +67,7 @@ header {
 }
 
 .scrolled header {
-  background-color: #444; /* or another color */
+  background-color: #333; /* Slight grey for scrolled state */
 }
 
 html {
@@ -71,20 +77,19 @@ html {
 header .container {
   display: flex;
   flex-direction: column; /* Stack items vertically */
-  align-items:flex-end; /* Align items to the left */
+  align-items: flex-end; /* Align items to the right */
   padding: 10px 0;
   max-width: 1200px; /* Adjust for your layout */
   margin: 0 auto; /* Center the container horizontally */
   justify-content: space-between; /* Space between heading and nav */
   width: 100%;
   padding: 0 20px;
-
 }
 
 header h1 {
   margin: 0;
   font-size: 1.8rem;
-  color: white; /* Adjust header color for visibility */
+  color: white; /* White text color for visibility */
 }
 
 header nav {
@@ -102,39 +107,37 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #fff; /* Text color */
+  color: #fff; /* White text color */
   text-decoration: none; /* Remove underline */
   padding: 8px 12px; /* Padding for clickable area */
   border-radius: 5px; /* Rounded corners */
-  background-color: #007bff; /* Background color */
+  background-color: #444; /* Slight grey background */
   display: block; /* Ensure the link takes full space */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
   font-weight: bold; /* Make text bold */
 }
 
-
 header nav ul li a:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-  color: #fff; /* Text color on hover */
+  background-color: #fff; /* White background on hover */
+  color: #000; /* Black text on hover */
 }
-
 
 /* Section Titles */
 h2 {
   text-align: center;
-  color: #fff;
+  color: #fff; /* White color for section titles */
   margin-bottom: 20px;
-  border-bottom: 2px solid #007bff;
+  border-bottom: 2px solid #ccc; /* Grey border for subtle emphasis */
   display: inline-block;
   padding-bottom: 10px;
 }
 
 /* About Section */
 #about {
-  background-color: #1e1e1e; /* Darker section background */
+  background-color: #000; /* Black background */
   padding: 60px 0;
   text-align: center;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #333; /* Dark grey border */
 }
 
 .profile {
@@ -150,13 +153,13 @@ h2 {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow for contrast */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Darker shadow for better contrast */
 }
 
 .profile-info {
   max-width: 600px;
   text-align: center;
-  color: #ddd; /* Slightly lighter text */
+  color: #ccc; /* Lighter grey for the text */
 }
 
 .profile-info h2 {
@@ -167,8 +170,8 @@ h2 {
 
 /* General Button Styling */
 .btn {
-  background-color: #007bff; /* Primary color */
-  color: #fff; /* Text color */
+  background-color: #333; /* Dark grey for the button */
+  color: #fff; /* White text color */
   padding: 5px 10px; /* Increased padding */
   border-radius: 10px; /* Rounded buttons */
   cursor: pointer;
@@ -179,13 +182,12 @@ h2 {
   margin: 10px; /* Space between buttons */
   text-align: center;
   text-decoration: none;
-
 }
 
 .btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #555; /* Lighter grey on hover */
   border-color: #fff; /* White border on hover */
-  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* Subtle shadow */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
 .btn:active {
@@ -193,19 +195,20 @@ h2 {
 }
 
 .btn-primary {
-  background-color: #28a745; /* Green button */
-  border-color: #28a745;
+  background-color: #444; /* Medium grey for primary button */
+  border-color: #444;
 }
 
 .btn-primary:hover {
-  background-color: #218838;
-  border-color: #fff;
+  background-color: #666; /* Lighter grey on hover */
+  border-color: #fff; /* White border on hover */
 }
+
 
 /* Projects Section */
 #projects {
   padding: 80px 0;
-  background-color: #1e1e1e;
+  background-color: #000; /* Black background */
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -213,8 +216,8 @@ h2 {
   text-align: center;
   font-size: 2.8rem;
   margin-bottom: 40px;
-  color: #ffffff;
-  border-bottom: 3px solid #007bff;
+  color: #fff; /* White color for title */
+  border-bottom: 3px solid #444; /* Dark grey border */
   display: inline-block;
   padding-bottom: 10px;
 }
@@ -235,17 +238,17 @@ h2 {
 
 /* Project Card */
 .project {
-  background-color: #282828;
+  background-color: #222; /* Dark grey background */
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Darker shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #ffffff;
+  color: #fff; /* White text color */
 }
 
 .project:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
 }
 
 .project img {
@@ -260,20 +263,20 @@ h2 {
   font-size: 1.6rem;
   margin-bottom: 15px;
   text-align: center;
-  color: #00aaff;
+  color: #ccc; /* Light grey color for project title */
 }
 
 .project p {
   font-size: 1rem;
   margin-bottom: 20px;
   line-height: 1.5;
-  color: #cccccc;
+  color: #ddd; /* Light grey for project description */
 }
 
 .project ol {
   margin-left: 20px;
   margin-bottom: 20px;
-  color: #cccccc;
+  color: #ddd; /* Light grey for list */
 }
 
 .project ol li {
@@ -284,125 +287,215 @@ h2 {
   display: block;
   text-align: center;
   padding: 10px 15px;
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: #444; /* Dark grey button */
+  color: #fff; /* White text */
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s;
 }
+
+.project .btn:hover {
+  background-color: #555; /* Slightly lighter grey on hover */
+}
+
 /* Footer */
 footer {
-  background-color:#000; /* Dark background color */
-  color: #fff; /* Light text color for contrast */
-  padding: 20px 0;
-  text-align: center; /* Center text */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text for high contrast */
+  padding: 30px 0; /* Added padding for spacing */
+  text-align: center; /* Centered text */
   position: relative;
   bottom: 0;
   width: 100%;
-  border-top: 1px solid #555; /* Subtle top border */
+  border-top: 1px solid #333; /* Subtle dark grey border */
 }
 
+/* Links */
 footer a {
-  color: #007bff; /* Link color */
-  text-decoration: none; /* Remove underline */
-  font-weight: bold; /* Bold links */
-  transition: color 0.3s; /* Smooth color transition */
+  color: #fff; /* White link color */
+  text-decoration: none; /* No underline */
+  font-weight: 600; /* Slightly lighter bold */
+  transition: color 0.3s, transform 0.3s; /* Smooth color and scale transition */
 }
 
+/* Hover Effects for Links */
 footer a:hover {
-  color: #0056b3; /* Darker blue on hover */
+  color: #bbb; /* Light grey on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
+/* Paragraph Text */
 footer p {
-  margin: 10px 0; /* Spacing for text */
-  font-size: 0.9rem; /* Slightly smaller font size */
+  margin: 15px 0; /* Spacing for clarity */
+  font-size: 1rem; /* Standard font size */
   color: #ddd; /* Light grey for secondary text */
 }
 
-/* Responsive Adjustments for Footer */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   footer {
-    padding: 15px 10px; /* Adjust padding for smaller screens */
+    padding: 20px 15px; /* Adjusted padding for smaller screens */
   }
 
   footer p {
-    font-size: 0.8rem; /* Smaller text size for mobile */
+    font-size: 0.85rem; /* Slightly smaller text for mobile */
+  }
+
+  footer a {
+    font-size: 0.95rem; /* Adjusted link font size */
   }
 }
+
+/* General Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Black background */
+  color: #fff; /* Default text color */
+}
+
 /* Contact Section Styling */
 #contact {
-  padding: 80px 20px; /* Added padding for spacing */
-  background-color: #1e1e1e; /* Background color consistent with the site */
-  color: #fff; /* Text color for readability */
+  padding: 80px 20px;
+  background-color: #1c1c1c; /* Dark grey background */
+  color: #fff;
 }
 
 #contact .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px; /* Limit the width for better readability */
+  background-color: #2c2c2c; /* Slightly lighter grey for contrast */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Deep shadow for depth */
   width: 100%;
+  max-width: 800px;
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  border: 4px solid #fff; /* White border to frame the profile */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .profile-info {
   width: 100%;
-  text-align: left; /* Align text to the left for better readability */
+  text-align: center;
 }
 
 .profile-info h2 {
-  font-size: 2.5rem; /* Increased font size */
-  margin-bottom: 20px; /* Increased margin for spacing */
-  color: #fff;
-  align-items: center;
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  color: #fff; /* White text for contrast */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for text */
 }
 
-.profile-info form {
+.form-group {
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Increased gap between form elements */
+  align-items: flex-start;
 }
 
-.profile-info label {
-  font-size: 1.1rem; /* Larger font size for labels */
-  margin-bottom: 5px; /* Space between label and input */
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #ccc; /* Light grey for labels */
 }
 
-.profile-info input[type="text"],
-.profile-info input[type="email"],
-.profile-info textarea {
-  width: 100%; /* Full width inputs */
-  padding: 12px 15px; /* Increased padding for better usability */
-  border: 1px solid #444; /* Subtle border */
-  border-radius: 5px;
-  background-color: #2c2c2c; /* Dark background for inputs */
-  color: #fff; /* White text for readability */
-  font-size: 1rem; /* Adequate font size */
-  transition: border 0.3s ease;
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #444; /* Grey border for inputs */
+  border-radius: 6px;
+  background-color: #1c1c1c; /* Dark grey for input background */
+  color: #fff; /* White text */
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-info input[type="text"]:focus,
-.profile-info input[type="email"]:focus,
-.profile-info textarea:focus {
-  border: 1px solid #007bff; /* Highlight border on focus */
-  outline: none; /* Remove default outline */
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+  border: 1px solid #fff; /* White border on focus */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* White glow on focus */
+  outline: none;
 }
 
-.profile-info textarea {
-  resize: vertical; /* Allow vertical resizing */
-  min-height: 150px; /* Minimum height for textarea */
+textarea {
+  resize: vertical;
+  min-height: 160px;
 }
 
+.btn {
+  background-color: #444; /* Grey background for buttons */
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #666; /* Lighter grey on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile {
+    padding: 20px;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-info h2 {
+    font-size: 2rem;
+  }
+
+  .form-group label,
+  .form-group input,
+  .form-group textarea {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .profile-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-links a {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
