@@ -148,13 +148,6 @@ h2 {
   margin-top: 50px; /* Space between the header and profile section */
 }
 
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Darker shadow for better contrast */
-}
 
 .profile-info {
   max-width: 600px;
@@ -388,7 +381,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
-  border: 4px solid #fff; /* White border to frame the profile */
+  
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
