@@ -441,24 +441,6 @@ footer p {
   }
 }
 
-@media screen and (max-width: 480px) {
-  footer {
-    padding: 10px 5px; /* Compact padding for very small screens */
-    font-size: 0.8rem; /* Reduce font size further */
-  }
-
-  footer p {
-    font-size: 0.8rem; /* Further reduce text size */
-    margin: 8px 0; /* Tighter spacing for compact design */
-  }
-
-  footer a {
-    font-size: 0.8rem; /* Smaller font size for links */
-    padding: 4px; /* Compact padding */
-    display: inline-block; /* Ensure links stack correctly in tight spaces */
-  }
-}
-
 
 /* Contact Section Styling */
 #contact {
