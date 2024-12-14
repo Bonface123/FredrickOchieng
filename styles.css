@@ -57,7 +57,7 @@ header {
   top: 0;
   width: 100%;
   justify-content: space-between;
-  background-color: #fff; /* Black background */
+  background-color: #fff; /* White background */
   z-index: 1000; /* To ensure it stays above other content */
   transition: background-color 0.3s;
 }
@@ -76,12 +76,12 @@ html {
 
 header .container {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: flex-end; /* Align items to the right */
+  flex-direction: row; /* Always use row layout */
+  align-items: center; /* Align items vertically centered */
   padding: 10px 0;
   max-width: 1200px; /* Adjust for your layout */
   margin: 0 auto; /* Center the container horizontally */
-  justify-content: space-between; /* Space between heading and nav */
+  justify-content: space-between; /* Space between title and nav */
   width: 100%;
   padding: 0 20px;
 }
@@ -89,21 +89,22 @@ header .container {
 header h1 {
   margin: 0;
   font-size: 1.8rem;
-  color:#000; /* White text color for visibility */
+  color: #000; /* Black text color */
 }
 
 header nav {
-  margin-left: auto; /* Push the nav to the far right */
+  margin-left: auto; /* Push the navigation to the far right */
 }
 
 header nav ul {
   list-style: none;
   display: flex; /* Align items in a row */
   gap: 15px; /* Space between navigation items */
+  justify-content: flex-end; /* Align links to the far right */
 }
 
 header nav ul li {
-  display: inline-block; /* Make items inline-block */
+  display: inline-block; /* Keep items inline */
 }
 
 header nav ul li a {
@@ -116,6 +117,57 @@ header nav ul li a {
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
   font-weight: bold; /* Make text bold */
 }
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  header .container {
+    flex-direction: row; /* Keep horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    justify-content: space-between; /* Space between title and nav */
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  header nav ul {
+    flex-direction: row; /* Keep navigation items horizontal */
+    gap: 10px; /* Adjust gap for smaller screens */
+    justify-content: flex-end; /* Keep links aligned to the right */
+    flex-wrap: wrap; /* Allow wrapping if there isn't enough space */
+  }
+
+  header h1 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    margin: 0; /* Remove extra margins */
+  }
+
+  header nav ul li a {
+    font-size: 0.9rem; /* Adjust font size for links */
+    padding: 6px 10px; /* Adjust padding for smaller screens */
+    white-space: nowrap; /* Prevent links from wrapping within themselves */
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  header .container {
+    padding: 5px; /* Compact padding */
+  }
+
+  header h1 {
+    font-size: 1.2rem; /* Further reduce font size for the title */
+  }
+
+  header nav ul {
+    gap: 5px; /* Smaller gaps for tighter layout */
+  }
+
+  header nav ul li a {
+    font-size: 0.8rem; /* Smaller font size for links */
+    padding: 4px 8px; /* Compact padding for links */
+    white-space: nowrap; /* Prevent wrapping of text within links */
+  }
+}
+
+
 
 /* Section Titles */
 h2 {
