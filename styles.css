@@ -76,12 +76,12 @@ html {
 
 header .container {
   display: flex;
-  flex-direction: row; /* Always use row layout */
-  align-items: center; /* Align items vertically centered */
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-end; /* Align items to the right */
   padding: 10px 0;
   max-width: 1200px; /* Adjust for your layout */
   margin: 0 auto; /* Center the container horizontally */
-  justify-content: space-between; /* Space between title and nav */
+  justify-content: space-between; /* Space between heading and nav */
   width: 100%;
   padding: 0 20px;
 }
@@ -93,18 +93,17 @@ header h1 {
 }
 
 header nav {
-  margin-left: auto; /* Push the navigation to the far right */
+  margin-left: auto; /* Push the nav to the far right */
 }
 
 header nav ul {
   list-style: none;
   display: flex; /* Align items in a row */
-  gap: 15px; /* Space between navigation items */
-  justify-content: flex-end; /* Align links to the far right */
+  gap: 10px; /* Space between navigation items */
 }
 
 header nav ul li {
-  display: inline-block; /* Keep items inline */
+  display: inline-block; /* Make items inline-block */
 }
 
 header nav ul li a {
@@ -117,6 +116,7 @@ header nav ul li a {
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
   font-weight: bold; /* Make text bold */
 }
+
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
