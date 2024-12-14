@@ -57,7 +57,7 @@ header {
   top: 0;
   width: 100%;
   justify-content: space-between;
-  background-color: #fff; /* Black background */
+  background-color: #fff; /* White background */
   z-index: 1000; /* To ensure it stays above other content */
   transition: background-color 0.3s;
 }
@@ -89,7 +89,7 @@ header .container {
 header h1 {
   margin: 0;
   font-size: 1.8rem;
-  color:#000; /* White text color for visibility */
+  color: #000; /* Black text color */
 }
 
 header nav {
@@ -116,6 +116,48 @@ header nav ul li a {
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
   font-weight: bold; /* Make text bold */
 }
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  header .container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center align items */
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  header nav ul {
+    flex-direction: column; /* Stack navigation items vertically */
+    gap: 10px; /* Smaller gap between items */
+    align-items: center; /* Center align navigation items */
+  }
+
+  header h1 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    margin-bottom: 10px; /* Add space between title and nav */
+  }
+
+  header nav ul li a {
+    font-size: 0.9rem; /* Adjust font size for links */
+    padding: 6px 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem; /* Further reduce font size for very small screens */
+  }
+
+  header nav ul {
+    gap: 5px; /* Reduce gap between items */
+  }
+
+  header nav ul li a {
+    font-size: 0.8rem; /* Smaller font size for links */
+    padding: 4px 8px; /* Compact padding */
+  }
+}
+
 
 /* Section Titles */
 h2 {
