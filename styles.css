@@ -9,8 +9,8 @@
 body {
   line-height: 1.6;
   font-size: 16px;
-  background-color: #000; /* Dark background for modern look */
-  color:white; /* Slightly lighter text for better readability */
+  background-color: #fff; /* Dark background for modern look */
+  color:#000; /* Slightly lighter text for better readability */
   padding-top: 80px; /* Account for fixed header height */
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -57,7 +57,7 @@ header {
   top: 0;
   width: 100%;
   justify-content: space-between;
-  background-color: #000; /* Black background */
+  background-color: #fff; /* Black background */
   z-index: 1000; /* To ensure it stays above other content */
   transition: background-color 0.3s;
 }
@@ -89,7 +89,7 @@ header .container {
 header h1 {
   margin: 0;
   font-size: 1.8rem;
-  color: white; /* White text color for visibility */
+  color:#000; /* White text color for visibility */
 }
 
 header nav {
@@ -152,13 +152,13 @@ h2 {
 .profile-info {
   max-width: 600px;
   text-align: center;
-  color:white; /* Lighter grey for the text */
+  color:#000; /* Lighter grey for the text */
 }
 
 .profile-info h2 {
   font-size: 2.2rem;
   margin: 5px 0; /* Reduced margin for the name */
-  color: #fff; /* White color for name */
+  color: #000; /* White color for name */
 }
 
 /* General Button Styling */
@@ -201,7 +201,7 @@ h2 {
 /* Projects Section */
 #projects {
   padding: 80px 0;
-  background-color: #000; /* Black background */
+  background-color: #fff; /* Black background */
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -209,7 +209,7 @@ h2 {
   text-align: center;
   font-size: 2.8rem;
   margin-bottom: 40px;
-  color: #fff; /* White color for title */
+  color: #000; /* White color for title */
   border-bottom: 3px solid #444; /* Dark grey border */
   display: inline-block;
   padding-bottom: 10px;
@@ -231,12 +231,12 @@ h2 {
 
 /* Project Card */
 .project {
-  background-color:#1c1c1c; /* Dark grey background */
+  background-color:#fff; /* Dark grey background */
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Darker shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #fff; /* White text color */
+  color: #000; /* White text color */
 }
 
 .project:hover {
@@ -256,20 +256,20 @@ h2 {
   font-size: 1.6rem;
   margin-bottom: 15px;
   text-align: center;
-  color: #fff; /* Light grey color for project title */
+  color: #000; /* Light grey color for project title */
 }
 
 .project p {
   font-size: 1rem;
   margin-bottom: 20px;
   line-height: 1.5;
-  color: #fff; /* Light grey for project description */
+  color: #000; /* Light grey for project description */
 }
 
 .project ol {
   margin-left: 20px;
   margin-bottom: 20px;
-  color: #fff; /* Light grey for list */
+  color: #000; /* Light grey for list */
 }
 
 .project ol li {
@@ -293,8 +293,8 @@ h2 {
 
 /* Footer */
 footer {
-  background-color: #000; /* Black background */
-  color: #fff; /* White text for high contrast */
+  background-color: #fff; /* Black background */
+  color: #000; /* White text for high contrast */
   padding: 30px 0; /* Added padding for spacing */
   text-align: center; /* Centered text */
   position: relative;
@@ -305,7 +305,7 @@ footer {
 
 /* Links */
 footer a {
-  color: #fff; /* White link color */
+  color: #000; /* White link color */
   text-decoration: none; /* No underline */
   font-weight: 600; /* Slightly lighter bold */
   transition: color 0.3s, transform 0.3s; /* Smooth color and scale transition */
@@ -321,7 +321,7 @@ footer a:hover {
 footer p {
   margin: 15px 0; /* Spacing for clarity */
   font-size: 1rem; /* Standard font size */
-  color: #ddd; /* Light grey for secondary text */
+  color: #000; /* Light grey for secondary text */
 }
 
 /* Responsive Adjustments */
@@ -342,8 +342,8 @@ footer p {
 /* Contact Section Styling */
 #contact {
   padding: 80px 20px;
-  background-color: #000; /* Dark grey background */
-  color: #fff;
+  background-color:#fff; /* Dark grey background */
+  color: #000;
 }
 
 #contact .container {
@@ -373,7 +373,7 @@ footer p {
 .profile-info h2 {
   font-size: 2.8rem;
   margin-bottom: 25px;
-  color: #fff; /* White text for contrast */
+  color: #000; /* White text for contrast */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for text */
 }
 
@@ -387,7 +387,7 @@ footer p {
 .form-group label {
   margin-bottom: 8px;
   font-size: 1.1rem;
-  color: #ccc; /* Light grey for labels */
+  color: #000; /* Light grey for labels */
 }
 
 .form-group input[type="text"],
@@ -397,8 +397,8 @@ footer p {
   padding: 12px 15px;
   border: 1px solid #444; /* Grey border for inputs */
   border-radius: 6px;
-  background-color: #1c1c1c; /* Dark grey for input background */
-  color: #fff; /* White text */
+  background-color: #fff; /* Dark grey for input background */
+  color: #000; /* White text */
   font-size: 1rem;
   transition: border 0.3s ease, box-shadow 0.3s ease;
 }
@@ -406,7 +406,7 @@ footer p {
 .form-group input[type="text"]:focus,
 .form-group input[type="email"]:focus,
 .form-group textarea:focus {
-  border: 1px solid #fff; /* White border on focus */
+  border: 1px solid #000; /* White border on focus */
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* White glow on focus */
   outline: none;
 }
